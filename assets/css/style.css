@@ -1,0 +1,213 @@
+body {
+    background-image: url("../images/bananas.png");
+    min-height: 100vh;
+	min-width: 100vw;
+    margin: 0;
+	display: flex;
+    flex-direction: column;
+    /*border: 5px solid red;*/
+}
+
+.wrapper {
+    margin: 25px 0;
+}
+
+header {
+	width: 100%;
+    background-color: #ffffff;
+    border-bottom: 2px solid #cccccc;
+    margin-bottom: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+}
+
+ nav {
+    box-sizing: border-box;
+	width: 960px;
+	display: flex;
+    justify-content: space-between;
+}
+
+#jihongName {
+    color: white;
+    background-color: #4aaaa5;
+}
+
+.linkFlex {
+	display: flex;
+	align-items: center;
+}
+
+li{
+    display: inline-block;
+    padding: 10px;
+}
+
+a {
+    color: #777777;
+    text-decoration: none;
+}
+
+.mainContent {
+	width: 960px;
+    box-sizing: border-box; /*includes padding and border in the total width and height*/
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+    background-color: #ffffff;
+    border: 0.5px solid #dddddd;
+	flex: 1 0 auto;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+#jihongImg {
+    float: left;
+	padding-right: 15px;
+}
+
+h1 {
+    padding: 15px;
+    margin: 0 auto;
+	font-size: 32px;
+}
+
+h2, h3 {
+    color: #4aaaa5;
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+.imgFlex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.imgBox {
+    margin: 0 20px;
+}
+
+.imgCaption {
+    background-color: #4aaaa5;
+    color: white;
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    bottom: 60px;
+    z-index: 5;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    margin: 5px 0 15px 0;
+    border: 0.5px solid #dddddd;
+	line-height: 1.5;
+}
+
+button {
+    background-color: #4aaaa5;
+    color: white;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    border: none;
+    padding: 10px 25px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer {
+	/*width: 100%;*/
+    background-color: #666666;
+    border-top: 8px solid #4aaaa5;
+    margin-top: 25px;
+    padding: 25px;
+    text-align: center;
+	flex-shrink: 0;
+}
+
+.headingText {
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+}
+
+.otherText {
+    color: #777777;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.smFont {
+    font-size: small;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*
+need to fix header width/alignment in all media queries... 
+*/
+@media (max-width: 980px) { /*desktop*/
+
+	.mainContent {
+		width: 70%;
+		margin-right: auto;
+		margin-left: 15px;
+	}
+
+}
+
+@media (max-width: 768px) { /*tablet*/
+
+	.mainContent {
+        width: 95%;
+		margin: auto;
+		/*margin-left: 15px;*/
+	}
+
+}
+
+@media (max-width: 640px) { /*phone in landscape*/
+
+    header{
+		position: static;
+	}
+  
+	nav {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#jihongName, ul {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+    
+    #jihongLinks {
+        height: 50px;
+    }
+
+	img, .imgCaption {
+	    width: 100%;
+	}
+  
+}
